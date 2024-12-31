@@ -1,30 +1,44 @@
+import 'package:attendease_mec/UI/Constants/constants.dart';
+import 'package:attendease_mec/UI/Controllers/onboarding_controller.dart';
+import 'package:attendease_mec/UI/Screens/LandingScrren/OnBoardingComponents/landing_navigation.dart';
+import 'package:attendease_mec/UI/Screens/LandingScrren/OnBoardingComponents/landing_widget.dart';
+import 'package:attendease_mec/UI/Screens/LandingScrren/OnBoardingComponents/next_navigation.dart';
+import 'package:attendease_mec/UI/Screens/LandingScrren/OnBoardingComponents/skip_landing.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:get/get.dart';
 
-class LandingScreen extends StatefulWidget {
+class LandingScreen extends StatelessWidget {
   const LandingScreen({super.key});
 
   @override
-  State<LandingScreen> createState() => _LandingScreenState();
-}
-
-class _LandingScreenState extends State<LandingScreen> {
-  @override
-  void initState(){
-    super.initState();
-  Future.delayed(const Duration(milliseconds: 3000), () async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    prefs.setBool('firstTime', false);
-    if (mounted) {
-      Navigator.pop(context);
-    }
-  });
-  }
-  @override
   Widget build(BuildContext context) {
-    return const Placeholder(
-      child: Center(
-        child: Text("LANDING SCREEN"),
+    final controller  = Get.put(OnBoardingCOntroller());
+    return Scaffold(
+      backgroundColor: primaryBackground,
+      body: Stack(
+        children: [
+          PageView(
+            controller: controller.pageController,
+            onPageChanged: controller.updatePage,
+            children: [
+              LandingWidget(
+                image: 'assets/landingscreen/Hey.json',
+                title: 'Hehe',
+              ),
+              LandingWidget(
+                image: 'assets/landingscreen/Security.json',
+                title: 'Secure',
+              ),
+              LandingWidget(
+                image: 'assets/landingscreen/Partnership.json',
+                title: 'LETSSGOO',
+              )
+            ],
+          ),
+          SkipLanding(),
+          LandingNavigation(),
+          NextNavigation()
+        ],
       ),
     );
   }

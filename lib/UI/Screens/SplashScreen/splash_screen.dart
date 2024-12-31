@@ -47,7 +47,7 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Center(
         child: LoadingAnimationWidget.halfTriangleDot(
           color: Colors.white,
-          size: 100
+          size: 80
         ),
       ),
     );
