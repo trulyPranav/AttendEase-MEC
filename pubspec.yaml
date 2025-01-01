@@ -68,6 +68,7 @@ flutter:
   assets:
     - assets/homescreen/
     - assets/landingscreen/
+    - assets/loginscreen/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
