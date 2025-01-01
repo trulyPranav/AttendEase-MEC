@@ -4,8 +4,10 @@ import 'package:attendease_mec/UI/Screens/LandingScrren/OnBoardingComponents/lan
 import 'package:attendease_mec/UI/Screens/LandingScrren/OnBoardingComponents/landing_widget.dart';
 import 'package:attendease_mec/UI/Screens/LandingScrren/OnBoardingComponents/next_navigation.dart';
 import 'package:attendease_mec/UI/Screens/LandingScrren/OnBoardingComponents/skip_landing.dart';
+import 'package:attendease_mec/UI/Screens/LandingScrren/OnBoardingComponents/swipe_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:flutter_swipe_button/flutter_swipe_button.dart';
 
 class LandingScreen extends StatelessWidget {
   const LandingScreen({super.key});
@@ -32,6 +34,7 @@ class LandingScreen extends StatelessWidget {
               LandingWidget(
                 image: 'assets/landingscreen/Partnership.json',
                 title: 'LETSSGOO',
+                startButton: LoginSwipeButton()
               )
             ],
           ),

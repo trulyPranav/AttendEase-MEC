@@ -20,7 +20,9 @@ class LandingNavigation extends StatelessWidget {
           onDotClicked: controller.dotNavigation,
           count: 3,
           effect: const ExpandingDotsEffect(
-              activeDotColor: Colors.white, dotHeight: 6),
+              activeDotColor: Colors.white,
+              dotHeight: 6
+            ),
         ),
       ),
     );

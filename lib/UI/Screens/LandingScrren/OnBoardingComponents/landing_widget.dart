@@ -5,9 +5,11 @@ import 'package:lottie/lottie.dart';
 class LandingWidget extends StatelessWidget {
   final String image;
   final String title;
+  final Widget? startButton;
   const LandingWidget({
     required this.image,
     required this.title,
+    this.startButton,
     super.key
   });
 
@@ -20,7 +22,6 @@ class LandingWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(35)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        spacing: 70,
         children: [
           LottieBuilder.asset(
             image,
@@ -28,7 +29,14 @@ class LandingWidget extends StatelessWidget {
             width: 200,
             fit: BoxFit.contain,
           ),
+          SizedBox(
+            height: 70,
+          ),
           Text(title),
+          if (startButton != null) ...[
+            SizedBox(height: 30),
+            startButton!,
+          ],
         ],
       ),
     );

@@ -10,7 +10,7 @@ class NextNavigation extends StatelessWidget {
         bottom: 5,
         right: 25,
         child: IconButton(
-            onPressed: () => OnBoardingCOntroller.instance.nextPage(),
+            onPressed: () => OnBoardingCOntroller.instance.nextPage(context),
             icon: Icon(
               Icons.navigate_next_rounded,
               size: 35,

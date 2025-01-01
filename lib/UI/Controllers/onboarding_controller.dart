@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class OnBoardingCOntroller extends GetxController {
 
@@ -21,9 +22,11 @@ class OnBoardingCOntroller extends GetxController {
     );
   }
 
-  void nextPage() {
+  void nextPage(BuildContext context) async {
     if (currentPageIndex.value == 2) {
-      //Login Screen
+      Navigator.pop(context);
+      SharedPreferences prefs = await SharedPreferences.getInstance();
+      await prefs.setBool('firstTime', false);
     } else {
       int page = currentPageIndex.value + 1;
       pageController.animateToPage(
