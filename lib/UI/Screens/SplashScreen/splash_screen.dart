@@ -1,4 +1,5 @@
 import 'package:attendease_mec/UI/Constants/constants.dart';
+import 'package:attendease_mec/UI/Screens/HomeScreen/home_screen.dart';
 import 'package:attendease_mec/UI/Screens/LandingScrren/landing_screen.dart';
 import 'package:attendease_mec/UI/Screens/LoginScreen/login_screen.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
@@ -20,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
       //TODO: Implement Page Transition
       context,
       MaterialPageRoute(
-        builder: (context) => const LoginScreen()
+        builder: (context) => const HomeScreen()
       )
     );
     if (firstTime == null || firstTime == true) {

@@ -1,5 +1,6 @@
 import 'package:attendease_mec/UI/Constants/constants.dart';
 import 'package:attendease_mec/UI/Screens/HomeScreen/HomeScreenComponents/home_background.dart';
+import 'package:attendease_mec/UI/Screens/HomeScreen/HomeScreenComponents/home_foreground.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -17,7 +18,8 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SafeArea(
         child: Stack(
           children: [
-            HomeBackground()
+            HomeBackground(),
+            HomeForeground()
           ],
         )
       ),
