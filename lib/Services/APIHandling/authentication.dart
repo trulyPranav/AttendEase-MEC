@@ -1,4 +1,7 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:attendease_mec/Services/SharedPreferences/login_prefs.dart';
+import 'package:attendease_mec/UI/Screens/HomeScreen/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:attendease_mec/Services/API/login.dart';
 
@@ -11,10 +14,10 @@ class Authentication {
       } else {
         final token = loginResponse.accessToken;
         await saveLoginCredentials(username, password, token);
-        // Navigator.push(
-        //   context,
-        //   MaterialPageRoute(builder: (context) => Home(name: username, token: token)),
-        // );
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => HomeScreen()),
+        );
       }
     }
     catch (e) {
