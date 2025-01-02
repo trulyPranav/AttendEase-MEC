@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 const Color primaryBackground = Color(0xFF101010);
 const Color homeContainerColor = Color(0xFF2A2A2A);
 const Color dropDownColor = Color(0xFF242424);
+const Color smallTextColor = Color(0xFFFFFFFF);
 
 const Gradient headingGradient = LinearGradient(
     colors: [Color(0xFFFFFFFF), Color(0xFFAAAAAA), Color(0xFF1B1B1B)],
@@ -19,6 +20,25 @@ Gradient onBoardingGradient = LinearGradient(
   end: Alignment.bottomRight,
   stops: [0.2, 1.0],
 );
+
+Gradient buttonGradient = LinearGradient(
+  colors: [
+    Color(0xFFFFFFFF),
+    Color(0x991E1E1E)
+  ],
+  begin: Alignment.topLeft,
+  end: Alignment.bottomRight,
+);
+
+Gradient secondaryButtonGradient = LinearGradient(
+  colors: [
+    Color(0xFF000000),
+    Color(0xFFFFFFFF)
+  ],
+  begin: Alignment.topLeft,
+  end: Alignment.bottomRight,
+);
+
 
 Size screenSize() {
   if (Get.context != null) {

@@ -41,6 +41,8 @@ dependencies:
   get: ^4.6.6
   lottie: ^3.3.0
   flutter_swipe_button: ^2.1.3
+  simple_animated_button: ^0.0.9
+  http: ^1.2.2
 
 dev_dependencies:
   flutter_test:

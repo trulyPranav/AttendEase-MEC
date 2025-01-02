@@ -7,7 +7,6 @@ import 'package:attendease_mec/UI/Screens/LandingScrren/OnBoardingComponents/ski
 import 'package:attendease_mec/UI/Screens/LandingScrren/OnBoardingComponents/swipe_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:flutter_swipe_button/flutter_swipe_button.dart';
 
 class LandingScreen extends StatelessWidget {
   const LandingScreen({super.key});

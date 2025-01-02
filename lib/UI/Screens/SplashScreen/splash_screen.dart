@@ -17,6 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     final bool? firstTime = prefs.getBool('firstTime');
     Navigator.pushReplacement(
+      //TODO: Implement Page Transition
       context,
       MaterialPageRoute(
         builder: (context) => const LoginScreen()
