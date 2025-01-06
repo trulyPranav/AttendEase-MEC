@@ -21,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
       //TODO: Implement Page Transition
       context,
       MaterialPageRoute(
-        builder: (context) => const HomeScreen()
+        builder: (context) => const LoginScreen()
       )
     );
     if (firstTime == null || firstTime == true) {

@@ -13,7 +13,7 @@ class LandingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller  = Get.put(OnBoardingCOntroller());
+    final controller  = Get.put(OnBoardingController());
     return Scaffold(
       backgroundColor: primaryBackground,
       body: Stack(

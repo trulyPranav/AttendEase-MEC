@@ -8,7 +8,7 @@ class LandingNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = OnBoardingCOntroller.instance;
+    final controller = OnBoardingController.instance;
     return Positioned(
       bottom: getBottomBarHeight() - 30,
       left: 0,

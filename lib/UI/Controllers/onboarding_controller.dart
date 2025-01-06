@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class OnBoardingCOntroller extends GetxController {
+class OnBoardingController extends GetxController {
 
-  static OnBoardingCOntroller get instance => Get.find();
+  static OnBoardingController get instance => Get.find();
 
   final pageController = PageController();
 

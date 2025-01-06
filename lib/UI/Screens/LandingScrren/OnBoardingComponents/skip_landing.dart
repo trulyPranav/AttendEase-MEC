@@ -11,7 +11,7 @@ class SkipLanding extends StatelessWidget {
       bottom: getBottomBarHeight() - 50,
       left: 25,
       child: TextButton(
-        onPressed: () => OnBoardingCOntroller.instance.skipPage(),
+        onPressed: () => OnBoardingController.instance.skipPage(),
         child: const Text(
           "Skip",
           style: TextStyle(
