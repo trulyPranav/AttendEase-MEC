@@ -6,10 +6,14 @@ class DashboardContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenHeight = MediaQuery.of(context).size.height;
+    double screenWidth = MediaQuery.of(context).size.width; 
     return Opacity(
-      opacity: 0.9,
+      opacity: 1,
       child: Container(
-        margin: EdgeInsets.fromLTRB(0, 40, 0, 0),
+        height: screenHeight * 0.25,
+        width: screenWidth * 0.9,
+        margin: EdgeInsets.fromLTRB(0, 30, 0, 0),
         decoration: BoxDecoration(
           color: Color(0xFF2A2A2A),
           borderRadius: BorderRadius.circular(25),
@@ -19,7 +23,7 @@ class DashboardContainer extends StatelessWidget {
             Image.asset("assets/homescreen/mainContainer.png"),
             Positioned(
               bottom: 0,
-              right: 0,
+              right: 50,
               child: Image.asset("assets/homescreen/subContainer.png"),
             ),
             Positioned(
@@ -41,6 +45,30 @@ class DashboardContainer extends StatelessWidget {
                     color: smallTextColor,
                     fontFamily: 'Roboto',
                     fontWeight: FontWeight.w700,
+                    fontSize: 32
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              bottom: 28,
+              left: 30,
+              child: ShaderMask(
+                shaderCallback: (bounds) => LinearGradient(
+                  colors: [
+                    Color.fromARGB(255, 214, 214, 214),            
+                    Color.fromARGB(255, 56, 56, 56)
+                  ],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  stops: [0.5,1.0]
+                ).createShader(bounds),
+                child: Text(
+                  "Track your\nprogress",
+                  style: TextStyle(
+                    color: smallTextColor,
+                    fontFamily: 'Roboto',
+                    fontWeight: FontWeight.w200,
                     fontSize: 32
                   ),
                 ),
