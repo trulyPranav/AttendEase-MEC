@@ -21,6 +21,16 @@ Gradient onBoardingGradient = LinearGradient(
   stops: [0.2, 1.0],
 );
 
+Gradient attendanceContainerGradient = LinearGradient(
+  colors: [
+    Color.fromARGB(255, 35, 35, 35),
+    Color(0xFF2A2A2A),
+  ],
+  begin: Alignment.centerLeft,
+  end: Alignment.centerRight,
+  stops: [0.6, 1.0]
+);
+
 Gradient buttonGradient = LinearGradient(
   colors: [
     Color(0xFFFFFFFF),

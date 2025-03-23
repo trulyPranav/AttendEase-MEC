@@ -1,4 +1,5 @@
 import 'package:attendease_mec/UI/Constants/constants.dart';
+import 'package:attendease_mec/UI/Constants/primary_spinkit.dart';
 import 'package:attendease_mec/UI/Screens/HomeScreen/home_screen.dart';
 import 'package:attendease_mec/UI/Screens/LandingScrren/landing_screen.dart';
 import 'package:attendease_mec/UI/Screens/LoginScreen/login_screen.dart';
@@ -47,10 +48,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: primaryBackground,
       body: Center(
-        child: LoadingAnimationWidget.halfTriangleDot(
-          color: Colors.white,
-          size: 80
-        ),
+        child: PrimarySpinkit(size: 80)
       ),
     );
   }
