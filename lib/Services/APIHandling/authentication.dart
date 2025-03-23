@@ -1,11 +1,9 @@
 // ignore_for_file: use_build_context_synchronously
 
-import 'package:attendease_mec/Providers/attendance_provider.dart';
 import 'package:attendease_mec/Services/SharedPreferences/login_prefs.dart';
 import 'package:attendease_mec/UI/Screens/HomeScreen/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:attendease_mec/Services/API/login.dart';
-import 'package:provider/provider.dart';
 
 class Authentication {
   Future<void> usernameLogin(BuildContext context, String username, String password) async {
@@ -15,7 +13,6 @@ class Authentication {
         showAlertDialog(context);
       } else {
         final token = loginResponse.accessToken;
-        Provider.of<AttendanceProvider>(context, listen: false).setToken(token);
         await saveLoginCredentials(username, password, token);
         Navigator.push(
           context,
@@ -24,6 +21,15 @@ class Authentication {
       }
     }
     catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            'Error: ${e.toString()}',
+            style: TextStyle(color: Colors.white),
+          ),
+          backgroundColor: Colors.red,
+        ),
+      );
       showAlertDialog(context);
       print(e);
     }

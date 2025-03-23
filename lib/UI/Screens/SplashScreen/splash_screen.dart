@@ -1,9 +1,7 @@
 import 'package:attendease_mec/UI/Constants/constants.dart';
 import 'package:attendease_mec/UI/Constants/primary_spinkit.dart';
-import 'package:attendease_mec/UI/Screens/HomeScreen/home_screen.dart';
 import 'package:attendease_mec/UI/Screens/LandingScrren/landing_screen.dart';
 import 'package:attendease_mec/UI/Screens/LoginScreen/login_screen.dart';
-import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/material.dart';
 

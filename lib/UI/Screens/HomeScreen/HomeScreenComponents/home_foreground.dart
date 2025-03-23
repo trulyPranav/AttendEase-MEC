@@ -1,12 +1,10 @@
 import 'package:attendease_mec/Models/subject.dart';
-import 'package:attendease_mec/Providers/attendance_provider.dart';
 import 'package:attendease_mec/Services/API/attendance_fetch.dart';
 import 'package:attendease_mec/UI/Constants/primary_spinkit.dart';
 import 'package:attendease_mec/UI/Screens/HomeScreen/HomeScreenComponents/Widgets/attendance_container.dart';
 import 'package:attendease_mec/UI/Screens/HomeScreen/HomeScreenComponents/Widgets/dashboard_container.dart';
 import 'package:attendease_mec/UI/Screens/HomeScreen/HomeScreenComponents/Widgets/three_dots.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class HomeForeground extends StatefulWidget {
   const HomeForeground({super.key});

@@ -18,7 +18,7 @@ class AttendanceContainer extends StatelessWidget {
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width; 
     return Container(
-      height: screenHeight * 0.12,
+      height: screenHeight * 0.129,
       width: screenWidth * 0.9,
       margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
       padding: EdgeInsets.fromLTRB(30, 20, 30, 20),
