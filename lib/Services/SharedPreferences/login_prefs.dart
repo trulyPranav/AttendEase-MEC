@@ -8,9 +8,3 @@ Future<void> saveLoginCredentials(String username, String password, String token
   await prefs.setString('token', token);
   print(token);
 }
-
-Future<String?> getToken() async {
-  final prefs = await SharedPreferences.getInstance();
-  var token = prefs.getString('token');
-  return token;
-}

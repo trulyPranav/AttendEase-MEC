@@ -15,7 +15,7 @@ class HomeForeground extends StatefulWidget {
 
 class _HomeForegroundState extends State<HomeForeground> {
   late List<Subject> subjectDetails = [];
-  bool isLoading = true; // Track loading state
+  bool isLoading = true;
 
   @override
   void initState() {
@@ -28,7 +28,6 @@ class _HomeForegroundState extends State<HomeForeground> {
     await AttendanceFetch.fetchClass(); // Fetch the class name first
     await AttendanceFetch.attendanceFetch(); // Then fetch attendance data
 
-    // Now we can update the subjectDetails list
     setState(() {
       subjectDetails =
           AttendanceFetch.subjectDetails; // Update the subjectDetails list
@@ -61,8 +60,9 @@ class _HomeForegroundState extends State<HomeForeground> {
                     return AttendanceContainer(
                       subjectCode: subjectDetails[index].subCode,
                       subFullname: subjectDetails[index].name,
-                      attendancePercent:
-                          double.tryParse(subjectDetails[index].percentage),
+                      attendancePercent: double.tryParse(subjectDetails[index].percentage),
+                      presentClasses: double.tryParse(subjectDetails[index].present),
+                      totalClasses: double.tryParse(subjectDetails[index].total),
                     );
                   },
                 ),

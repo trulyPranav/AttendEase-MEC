@@ -23,7 +23,7 @@ class DashboardContainer extends StatelessWidget {
             Image.asset("assets/homescreen/mainContainer.png"),
             Positioned(
               bottom: 0,
-              right: 50,
+              right: 30,
               child: Image.asset("assets/homescreen/subContainer.png"),
             ),
             Positioned(
